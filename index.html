@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="icon"type="fav-icon" href="/IMG_20210905_142030.jpg">
+    <style>
+    body {
+    margin: 0;
+    padding: 0;
+    /* background-color: rgb(69, 101, 104); */
+    background-image: url('/pexels-roberto-nickson-2478248.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    width: 100vw;
+    justify-content: space-around;
+}
+
+.calci {
+    width: 400px;
+    /* background-color: black; */
+    background-image: url('/women.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    margin-left: -83%;
+    margin-top:2%;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border: 3px solid green;
+    border-radius: 20px;
+    height: 732px;
+
+}
+
+#display {
+    border-radius: 20px;
+    background-color: rgb(206, 251, 46);
+    width: 245px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 300px;
+    height: 60px;
+    margin-top: 20px;
+    border: 2px solid rgb(15, 14, 14);
+    color: black;
+    background: transparent;
+    color: rgb(7, 7, 7);
+}
+
+.btnDesign {
+    width: 55px;
+    height: 55px;
+    padding-top: -1px;
+    border: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 30px;
+    border: 2px dotted rgb(20, 49, 242);
+    margin: 1.5px;
+    background: transparent;
+    color: rgb(17, 17, 17);
+}
+
+.operatorDesign {
+    width: 55px;
+    height: 55px;
+    padding-top: -1px;
+    border: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: bold;
+    border: 2px dotted rgb(20, 49, 242);
+    border-radius: 30px;
+    margin: 1.5px;
+    background: transparent;
+    color: rgb(8, 8, 8);
+}
+
+.zero {
+    width: 110px;
+    height: 55px;
+    padding-top: -1px;
+    border: 2px dotted rgb(20, 49, 242);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 30px;
+    margin: 1.5px;
+    background: transparent;
+    color: rgb(4, 4, 4);
+}
+
+.btnDesign:hover {
+    background-color: aqua;
+    cursor: pointer;
+
+}
+
+.zero:hover {
+    background-color: aqua;
+    cursor: pointer;
+}
+
+.operatorDesign:hover {
+    background-color: aqua;
+    cursor: pointer;
+}
+
+.box {
+    width: 100%;
+    margin-top:14%;
+    color: aliceblue;
+    margin-left: 8px;
+    text-transform: uppercase;
+}
+
+.box p {
+    margin-left: 206px;
+    margin-top: 7px;
+    line-height: 1px;
+    font-size: 12px;
+}
+@media only screen and (max-width: 600px) {
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: rgb(69, 101, 104);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+    }
+
+    /* .calci {
+        margin: 0;
+        padding: 0;
+
+    } */
+
+    .box {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        text-transform: uppercase;
+    }
+
+    .box p {
+        margin-bottom: 10px;
+        padding: 0;
+        display: block;
+        color: rgb(185, 242, 30);
+    }
+
+    p {
+        text-align: center;
+        font-size: 38px;
+        color: red;
+    }
+
+    .calci {
+
+        padding: 4px;
+        margin: 3px;
+        height: 732px;
+        margin-top: 8px;
+
+    }
+
+    #display {
+        margin-top: 210px;
+        width: 90%;
+    }
+
+    .btnDesign {
+        width: 70px;
+        height: 70px;
+
+    }
+
+    .operatorDesign {
+        width: 70px;
+        height: 70px;
+
+    }
+
+    .zero {
+        width: 140px;
+        height: 55px;
+    }
+}
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h1>Online Calculator</h1>
+        <p>Designed by Er.Tribhuwan</p>
+    </div>
+        <form name="form1" class="calci" action="index.html" method="post">
+            <input type="text" name="answer" id="display" placeholder="Enter">
+            <br>
+            <br>
+            <input type="button" class="btnDesign" value="C" onclick="form1.answer.value=' '">
+            <input type="button" class="btnDesign" value="<"
+                onclick="form1.answer.value=form1.answer.value.substring(0,form1.answer.value.length*1-1)">
+            <input type="button" class="btnDesign" value="00" onclick="form1.answer.value+='00'">
+            <input type="button" class="operatorDesign" value="/" onclick="form1.answer.value+='/'">
+            <br><br>
+            <input type="button" class="btnDesign" value="7" onclick="form1.answer.value+='7'">
+            <input type="button" class="btnDesign" value="8" onclick="form1.answer.value+='8'">
+            <input type="button" class="btnDesign" value="9" onclick="form1.answer.value+='9'">
+            <input type="button" class="operatorDesign" value="*" onclick="form1.answer.value+='*'">
+            <br><br>
+            <input type="button" class="btnDesign" value="4" onclick="form1.answer.value+='4'">
+            <input type="button" class="btnDesign" value="5" onclick="form1.answer.value+='5'">
+            <input type="button" class="btnDesign" value="6" onclick="form1.answer.value+='6'">
+            <input type="button" class="operatorDesign" value="-" onclick="form1.answer.value+='-'">
+            <br><br>
+            <input type="button" class="btnDesign" value="1" onclick="form1.answer.value+='1'">
+            <input type="button" class="btnDesign" value="2" onclick="form1.answer.value+='2'">
+            <input type="button" class="btnDesign" value="3" onclick="form1.answer.value+='3'">
+            <input type="button" class="operatorDesign" value="+" onclick="form1.answer.value+='+'">
+            <br><br>
+            <input type="button" class="zero" value="0" onclick="form1.answer.value+='0'">
+            <input type="button" class="btnDesign" value="." onclick="form1.answer.value+='.'">
+            <input type="button" class="operatorDesign" value="=" onclick="form1.answer.value=eval(form1.answer.value)">
+
+        </form>
+        <!-- <p>Designed by Tribhuwan</p> -->
+
+</body>
+
+</html>
